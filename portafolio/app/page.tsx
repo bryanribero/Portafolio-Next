@@ -1,10 +1,14 @@
-
+import  Name  from '@/components/gen/name'
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-black">
-      <div className="text-center space-y-5 max-w-2x1 z-10">
-        <p className="py-1 px-2 bg-zinc-900/40 backdrop-blur-sm font-light rounded-full text-white inline-block">Join 7.000+ Users</p>
+    <div className="min-h-screen w-full bg-black ">
+      <div className='flex'>
+      <div className="w-full mt-15 ml-30">
+      <Name />
+      </div>
+      <div className='w-full'>
+      </div>
       </div>
     </div>
   );
