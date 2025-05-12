@@ -14,7 +14,7 @@ export default function Opciones() {
 
   return (
     <nav>
-      <ul className="list-none p-0 m-0">
+      <ul className="list-none p-0 m-0 max-w-40">
         {items.map(({ texto, href }) => (
           <li
             key={texto}

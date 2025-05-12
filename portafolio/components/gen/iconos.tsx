@@ -21,9 +21,9 @@ export default function MiComponenteConMultiplesBtn() {
         <div>
             <div><BtnDinamicos botones={listadoDeBtn} defaultActiveId='En' /></div>
             <div className='flex pt-7'>
-                <a href="https://github.com/bryanribero" target='_blank'><img src="/icons/icons8-github.svg" alt="GitHub" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:w-12'/></a>
-                <a href="https://www.linkedin.com/in/bryan-ribero-49b895330/" target='_blank'><img src="/icons/icons8-linkedin.svg" alt="LinkedIn" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:w-12 mx-6' /></a>
-                <a href="mailto:bryanribero@hotmail.com"><img src="/icons/icons8-ms-outlook.svg" alt="OutLook" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:w-12' /></a>
+                <a href="https://github.com/bryanribero" target='_blank'><img src="/icons/icons8-github.svg" alt="GitHub" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:scale-125'/></a>
+                <a href="https://www.linkedin.com/in/bryan-ribero-49b895330/" target='_blank'><img src="/icons/icons8-linkedin.svg" alt="LinkedIn" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:scale-125 mx-6' /></a>
+                <a href="mailto:bryanribero@hotmail.com"><img src="/icons/icons8-ms-outlook.svg" alt="OutLook" className='w-10 opacity-40 transition-all duration-300  hover:opacity-80 cursor-pointer hover:scale-125' /></a>
             </div>
         </div>
     );
