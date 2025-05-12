@@ -1,6 +1,6 @@
 .nav-item {
   color: rgba(255, 255, 255, 0.58);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer; 
 }
 
@@ -18,7 +18,7 @@
   display: inline-block;
   width: 60px;
   margin-right: 0.75rem;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .line-active {
