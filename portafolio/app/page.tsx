@@ -1,7 +1,8 @@
 import  Name  from '@/components/gen/name'
 import  Opciones  from '@/components/gen/opciones'
 import Iconos from '@/components/gen/iconos'
-import About from '@/components/gen/about'
+import SectionsAbout from '@/components/gen/sectionAbout'
+
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
     </div>
   </div>
   <div className='col-span-1 z-10 mt-15 max-w-200 ml-90'>
-    <About />
+    <SectionsAbout />
   </div>
 </div>
   );
