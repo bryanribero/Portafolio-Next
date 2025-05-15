@@ -2,6 +2,7 @@ import  Name  from '@/components/gen/name'
 import  Opciones  from '@/components/gen/opciones'
 import Iconos from '@/components/gen/iconos'
 import SectionsAbout from '@/components/gen/sectionAbout'
+import Skill from '@/components/gen/Skill'
 
 
 
@@ -19,8 +20,9 @@ export default function Home() {
       <Iconos />
     </div>
   </div>
-  <div className='col-span-1 z-10 mt-15 max-w-200 ml-90'>
+  <div className='col-span-1 z-10 mt-15 max-w-150 ml-90'>
     <SectionsAbout />
+    <Skill />
   </div>
 </div>
   );
