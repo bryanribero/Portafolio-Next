@@ -23,8 +23,8 @@ export default function Home() {
   </div>
   <div className='relative col-span-1 z-10 mt-15 max-w-150 ml-90 overflow-y-auto custom-scrollbar-hidden'>
     <SectionsAbout />
-    <div className='absolute top-220 left-0 w-full'>
-      
+    <div className='absolute top-220  w-full'>
+      <SkillComponent />
     </div>
   </div>
 </div>

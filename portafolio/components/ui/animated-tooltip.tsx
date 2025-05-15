@@ -56,7 +56,7 @@ export const AnimatedTooltip = <T extends { id: number; name?: string; designati
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-19 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center rounded-md bg-black px-4 py-2 text-xs shadow-xl"
+                className="absolute -top-19 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center rounded-md bg-black/85 px-4 py-2 text-xs shadow-xl"
               >
                 <div className="absolute  -bottom-px z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
                 <div className="absolute -bottom-px  z-30 h-px w-[50%] bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
