@@ -3,6 +3,7 @@ import  Opciones  from '@/components/gen/opciones'
 import Iconos from '@/components/gen/iconos'
 import SectionsAbout from '@/components/gen/sectionAbout'
 import Skill from '@/components/gen/Skill'
+import '@/app/scroll-hidden.css'
 
 
 
@@ -20,9 +21,11 @@ export default function Home() {
       <Iconos />
     </div>
   </div>
-  <div className='col-span-1 z-10 mt-15 max-w-150 ml-90'>
+  <div className='relative col-span-1 z-10 mt-15 max-w-150 ml-90 overflow-y-auto custom-scrollbar-hidden'>
     <SectionsAbout />
-    <Skill />
+    <div className='absolute top-220 left-0 w-full'>
+      <Skill />
+    </div>
   </div>
 </div>
   );

@@ -40,13 +40,58 @@ interface SkillItem {
             designation:"Advanced",
             image:"",
             texto:"Boostrap"
-        }
+        },
+        {
+            id: 5,
+            name:"Level",
+            designation:"Beginner",
+            image:"",
+            texto:"jQuery"
+        },
+        {
+            id: 6,
+            name:"Level",
+            designation:"Intermediate",
+            image:"",
+            texto:"React"
+        },
+        {
+            id: 7,
+            name:"Level",
+            designation:"Intermediate",
+            image:"",
+            texto:"Next.js"
+        },
+        {
+            id: 8,
+            name:"Level",
+            designation:"Beginner",
+            image:"",
+            texto:"Angular"
+        },
+        {
+            id: 9,
+            name:"Level",
+            designation:"Beginner",
+            image:"",
+            texto:"TypeScript"
+        },
+        {
+            id: 10,
+            name:"Level",
+            designation:"Intermediate",
+            image:"",
+            texto:"Tailwind"
+        },
+        
     ]
 
-export default function Skill() {
+export default function SkillFront() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-4 mb-10 w-full">
-      <AnimatedTooltip
+  <div>
+    <h2 className="text-gray-300 text-4xl font-bold">Front-end</h2>
+    <div className="flex flex-wrap justify-normal  mt-18 gap-20 w-full ml-10">
+      <AnimatedTooltip 
         items={frontEnd}
         renderItem={(item, handleMouseMove) => (
           <div className="inline-block" onMouseMove={handleMouseMove}>
@@ -55,5 +100,6 @@ export default function Skill() {
         )}
       />
     </div>
+  </div>
   )
 }
