@@ -52,7 +52,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
       {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5, // Cambiado a 0.5
+        threshold: 0.5, 
       }
     );
 

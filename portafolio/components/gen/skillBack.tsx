@@ -47,7 +47,7 @@ export default function SkillBack() {
   return (
     <div>
       <h2 className="text-gray-300 text-4xl font-bold">Back-end</h2>
-      <div className="grid grid-cols-3 gap-16 mt-18 ml-8"> {/* Usando grid de 3 columnas */}
+      <div className="grid grid-cols-3 gap-16 mt-18 ml-8"> 
         {backEnd.map((item) => (
           <div
             key={item.id}

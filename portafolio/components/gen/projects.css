@@ -1,0 +1,26 @@
+.edit-efects{
+    transition: all 0.3s ease-in-out;
+
+}
+
+.edit-efects svg {
+    transform: translateY(0); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.edit-efects:hover svg,
+.edit-efects:hover h3 {
+    color: #1e81e4fd;
+}
+
+.edit-efects:hover svg {
+    transform: translateY(-0.5em);
+}
+
+.edit-efects:hover p {
+    color: #D1D5DB;
+}
+
+.edit-efects:hover span {
+    background-color: #1e81e4ee;
+}

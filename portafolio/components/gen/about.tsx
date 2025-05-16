@@ -32,15 +32,15 @@ export default function About({ onComplete }: { onComplete?: () => void }) {
   return (
     <div className="space-y-6">
       {showTextA && (
-        <TextGenerateEffect words={textA} onComplete={() => setShowTextB(true)} duration={0.4} staggerDelay={0.02} />
+        <TextGenerateEffect words={textA} onComplete={() => setShowTextB(true)} duration={0.2} staggerDelay={0.01} />
       )}
 
       {showTextB && (
-        <TextGenerateEffect words={textB} onComplete={() => setShowTextC(true)} duration={0.4} staggerDelay={0.02} />
+        <TextGenerateEffect words={textB} onComplete={() => setShowTextC(true)} duration={0.2} staggerDelay={0.01} />
       )}
 
       {showTextC && (
-        <TextGenerateEffect words={textC} duration={0.4} staggerDelay={0.02} onComplete={handleFinalComplete} />
+        <TextGenerateEffect words={textC} duration={0.2} staggerDelay={0.01} onComplete={handleFinalComplete} />
       )}
     </div>
   )

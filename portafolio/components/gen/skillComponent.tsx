@@ -11,9 +11,9 @@ export default function SkillComponent() {
   const backRef = useRef(null);
   const toolsRef = useRef(null);
 
-  const frontIsInView = useInView(frontRef); // Removed { once: true }
-  const backIsInView = useInView(backRef);   // Removed { once: true }
-  const toolsIsInView = useInView(toolsRef);  // Removed { once: true }
+  const frontIsInView = useInView(frontRef); 
+  const backIsInView = useInView(backRef);   
+  const toolsIsInView = useInView(toolsRef);  
 
   const animationVariants = {
     hidden: { opacity: 0, y: 20 },

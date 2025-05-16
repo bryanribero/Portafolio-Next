@@ -90,11 +90,11 @@ export default function SkillFront() {
   return (
   <div>
         <h2 className="text-gray-300 text-4xl font-bold">Front-end</h2>
-        <div className="grid grid-cols-3 gap-16 mt-18 ml-8"> {/* Usando grid de 3 columnas */}
+        <div className="grid grid-cols-3 gap-16 mt-18 ml-8">
           {frontEnd.map((item) => (
             <div
               key={item.id}
-              className="flex items-center justify-center" // Centrar el contenido (AnimatedTooltip)
+              className="flex items-center justify-center" 
             >
               <AnimatedTooltip
                 items={[item]}

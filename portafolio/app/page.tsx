@@ -1,19 +1,19 @@
 'use client';
 
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import Name from '@/components/gen/name';
 import Opciones from '@/components/gen/opciones';
 import Iconos from '@/components/gen/iconos';
-import SectionsAbout from '@/components/gen/sectionAbout';
+import AboutMotion from '@/components/gen/aboutMotion';
 import SkillComponent from '@/components/gen/skillComponent';
-import Projects from '@/components/gen/projects';
+import ProjectsMotion from '@/components/gen/projectsMotion';
 import '@/app/scroll-hidden.css';
 
 export default function Home() {
-  const [showButton, setShowButton] = useState(false);
+  
   const aboutRef = useRef<HTMLDivElement>(null!);
   const skillsRef = useRef<HTMLDivElement>(null!);
-  const projectsRef = useRef<HTMLDivElement>(null!); // Crea la referencia para Projects
+  const projectsRef = useRef<HTMLDivElement>(null!); 
 
   return (
     <div className="min-h-screen w-full bg-black grid grid-cols-[600px_1fr] gap-4">
@@ -25,7 +25,7 @@ export default function Home() {
           <Opciones
             aboutRef={aboutRef}
             skillsRef={skillsRef}
-            projectsRef={projectsRef} // Pasa la referencia a Opciones
+            projectsRef={projectsRef} 
           />
         </div>
         <div className='relative z-10 mb-10'>
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
       <div className='relative col-span-1 z-10 mt-15 max-w-150 ml-90 overflow-y-auto custom-scrollbar-hidden'>
         <div id='about' ref={aboutRef}>
-          <SectionsAbout />
+          <AboutMotion />
         </div>
         <div className='absolute top-220 w-full'>
           <div id='skills' ref={skillsRef}>
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div id='projects' className='mt-50 absolute top-520 w-full' ref={projectsRef}> 
-          <Projects />
+          <ProjectsMotion />
         </div>
       </div>
     </div>
