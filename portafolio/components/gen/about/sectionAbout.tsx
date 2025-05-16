@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import About from "@/components/gen/about"
+import About from "@/components/gen/about/about"
 import { motion } from "motion/react"
 
 export default function SectionsAbout() {

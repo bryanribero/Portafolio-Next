@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import '@/components/gen/opciones.css';
+import '@/components/gen/firstContent/opciones.css';
 
 interface OptionItem {
   texto: string;

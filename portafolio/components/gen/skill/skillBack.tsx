@@ -2,7 +2,7 @@
 
 import React from "react";
 import SkillContent from "./skills-content";
-import { AnimatedTooltip } from "../ui/animated-tooltip";
+import { AnimatedTooltip } from "../../ui/animated-tooltip";
 
 interface SkillItem {
   id: number
