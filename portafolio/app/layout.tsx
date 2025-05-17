@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
-const inter = Inter();
+const inter = Inter({
+  subsets: ['latin'], 
+  preload: true,     
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
