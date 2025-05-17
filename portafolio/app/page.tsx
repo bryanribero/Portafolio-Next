@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         <div className="relative col-span-1 z-10  lg:col-start-2 lg:row-start-1 max-w-150 mx-auto px-4 md:px-0 lg:h-screen lg:overflow-y-auto custom-scrollbar-hidden">
           <div className="flex flex-col mt-40 lg:mt-10 ">
-            <div id="about" ref={aboutRef} className="mb-80">
+            <div id="about" ref={aboutRef} className="mb-70 lg:min-h-[80vh]">
               <AboutMotion />
             </div>
             <div id="skills" ref={skillsRef} className="mb-40">
