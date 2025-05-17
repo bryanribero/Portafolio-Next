@@ -1,37 +1,42 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
+import { useState } from "react";
+import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from "motion/react";
+import Image from "next/image";
 
-import { useState } from "react"
-import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from "motion/react"
-
-export const AnimatedTooltip = <T extends { id: number; name?: string; designation?: string; image?: string }>({
+export const AnimatedTooltip = <
+  T extends { id: number; name?: string; designation?: string; image?: string }
+>({
   items,
   renderItem,
   renderTooltip,
 }: {
-  items: T[]
-  renderItem?: (item: T, handleMouseMove: (event: any) => void) => React.ReactNode
-  renderTooltip?: (item: T) => React.ReactNode
+  items: T[];
+  renderItem?: (
+    item: T,
+    handleMouseMove: (event: React.MouseEvent<HTMLElement>) => void
+  ) => React.ReactNode;
+  renderTooltip?: (item: T) => React.ReactNode;
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const springConfig = { stiffness: 100, damping: 5 }
-  const x = useMotionValue(0) // going to set this value on mouse move
-  // rotate the tooltip
-  const rotate = useSpring(useTransform(x, [-100, 100], [-45, 45]), springConfig)
-  // translate the tooltip
-  const translateX = useSpring(useTransform(x, [-100, 100], [-50, 50]), springConfig)
-  const handleMouseMove = (event: any) => {
-    const halfWidth = event.target.offsetWidth / 2
-    x.set(event.nativeEvent.offsetX - halfWidth) // set the x value, which is then used in transform and rotate
-  }
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const springConfig = { stiffness: 100, damping: 5 };
+  const x = useMotionValue(0);
+
+  const rotate = useSpring(useTransform(x, [-100, 100], [-45, 45]), springConfig);
+  const translateX = useSpring(useTransform(x, [-100, 100], [-50, 50]), springConfig);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    const target = event.target as HTMLElement;
+    const halfWidth = target.offsetWidth / 2;
+    x.set(event.nativeEvent.offsetX - halfWidth);
+  };
 
   return (
     <>
       {items.map((item) => (
         <div
           className="group relative inline-block"
-          // Usamos el id como clave única en lugar de name
           key={`item-${item.id}`}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -72,20 +77,21 @@ export const AnimatedTooltip = <T extends { id: number; name?: string; designati
               </motion.div>
             )}
           </AnimatePresence>
-          {renderItem
-            ? renderItem(item, handleMouseMove)
-            : item.image && (
-                <img
-                  onMouseMove={handleMouseMove}
-                  height={100}
-                  width={100}
-                  src={item.image || "/placeholder.svg"}
-                  alt={item.name || ""}
-                  className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
-                />
-              )}
+
+          {renderItem ? (
+            renderItem(item, handleMouseMove)
+          ) : item.image && (
+            <Image
+              onMouseMove={handleMouseMove}
+              height={100}
+              width={100}
+              src={item.image || "/placeholder.svg"}
+              alt={item.name || ""}
+              className="relative !m-0 h-14 w-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
+            />
+          )}
         </div>
       ))}
     </>
-  )
-}
+  );
+};
