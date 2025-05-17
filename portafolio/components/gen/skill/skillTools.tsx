@@ -39,7 +39,7 @@ interface SkillItem {
 export default function SkillTools() {
   return (
   <div>
-          <div className="flex justify-center"><h2 className="text-gray-300 text-4xl font-bold ">Tools & Technologies</h2></div>
+          <div className="flex justify-center"><h2 className="text-gray-300 text-4xl font-bold text-center">Tools & Technologies</h2></div>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-14 mt-18 "> 
             {tools.map((item) => (
               <div
