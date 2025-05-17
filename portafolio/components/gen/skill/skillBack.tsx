@@ -51,7 +51,7 @@ export default function SkillBack() {
         {backEnd.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-center" // Centrar el contenido (AnimatedTooltip)
+            className="flex items-center justify-center" 
           >
             <AnimatedTooltip
               items={[item]}

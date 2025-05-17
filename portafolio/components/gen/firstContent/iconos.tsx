@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';  // Importa Image de next/image
+import Image from 'next/image';  
 import BtnDinamicos from './idiomas';
 import './boton.css';
 

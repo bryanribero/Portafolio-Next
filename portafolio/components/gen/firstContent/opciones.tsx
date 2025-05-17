@@ -43,7 +43,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
     }
   }
 
-  // Creamos una función estable para el callback del observer
+  
   const createIntersectionCallback = useMemo(() => {
     return (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -56,7 +56,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
         }
       })
     }
-  }, [items, activo]) // Solo dependencias estables
+  }, [items, activo]) 
 
   useEffect(() => {
     const observer = new IntersectionObserver(createIntersectionCallback, {
@@ -65,7 +65,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
       threshold: [0, 0.5, 1],
     })
 
-    // Observamos los elementos
+    
     Object.entries(refs).forEach(([, ref]) => {
       if (ref?.current) {
         observer.observe(ref.current)
@@ -75,7 +75,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
     return () => {
       observer.disconnect()
     }
-  }, [refs, createIntersectionCallback]) // Dependencias estables
+  }, [refs, createIntersectionCallback]) 
 
   return (
     <nav>

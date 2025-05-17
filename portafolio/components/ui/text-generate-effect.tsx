@@ -3,26 +3,24 @@ import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
 import { cn } from "@/lib/utils";
 
-// Función auxiliar para procesar el texto y encontrar marcadores de formato
+
 const processText = (text: string) => {
-  // Patrón para encontrar texto entre {{formato:texto}}
-  // Formatos: bold, light (para text-gray-300)
   const formatPattern = /\{\{(bold|light):([^{}]+)\}\}/g;
 
   const parts: Array<{ text: string; format?: string }> = [];
   let lastIndex = 0;
   let match;
 
-  // Buscar todas las coincidencias en el texto
+
   while ((match = formatPattern.exec(text)) !== null) {
-    // Añadir el texto antes del marcador
+
     if (match.index > lastIndex) {
       parts.push({
         text: text.substring(lastIndex, match.index),
       });
     }
 
-    // Añadir el texto con formato
+  
     parts.push({
       text: match[2],
       format: match[1],
@@ -31,7 +29,7 @@ const processText = (text: string) => {
     lastIndex = match.index + match[0].length;
   }
 
-  // Añadir el resto del texto después del último marcador
+ 
   if (lastIndex < text.length) {
     parts.push({
       text: text.substring(lastIndex),
@@ -58,10 +56,10 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
 
-  // Procesar el texto para encontrar marcadores de formato
+ 
   const textParts = processText(words);
 
-  // Crear un array plano de palabras con sus formatos
+
   const processedWords: Array<{ word: string; format?: string }> = [];
 
   textParts.forEach((part) => {
@@ -89,7 +87,7 @@ export const TextGenerateEffect = ({
       }
     );
 
-    // Llamar a onComplete cuando la animación termina
+  
     if (onComplete) {
       controls.then(() => {
         setTimeout(onComplete, 200);
@@ -97,7 +95,7 @@ export const TextGenerateEffect = ({
     }
 
     return () => controls.stop();
-  }, [animate, duration, staggerDelay, filter, onComplete]); // Removed scope.current
+  }, [animate, duration, staggerDelay, filter, onComplete]);
 
   const renderWords = () => {
     return (
