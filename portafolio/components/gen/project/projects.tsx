@@ -26,8 +26,8 @@ const projectContent: projectInterface[] = [
     id: 2,
     image: "/assets/react-test.png", 
     title: "React test",
-    description: "Online sales website, where you can publish, purchase, and arrange shipping.",
-    technology: ["React", "Javascript"],
+    description: "Page that creates <div> when you send text through <textarea>.",
+    technology: ["React", "Javascript", "CSS"],
     link: "https://proyecto-react-omega-three.vercel.app/",
   },
 ];
