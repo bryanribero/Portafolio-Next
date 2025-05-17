@@ -16,19 +16,19 @@ interface projectInterface {
 const projectContent: projectInterface[] = [
   {
     id: 1,
-    image: "/assets/prueba.jpg", 
+    image: "/assets/e-commerce.png", 
     title: "E-commerce",
     description: "Online sales website, where you can publish, purchase, and arrange shipping.",
-    technology: ["React", "Node.js", "JavaScript"],
-    link: "#",
+    technology: ["Javascript", "HTML", "CSS", "Boostrap"],
+    link: "https://emercadojap.vercel.app/",
   },
   {
     id: 2,
-    image: "/assets/prueba.jpg", 
-    title: "E-commerce",
+    image: "/assets/react-test.png", 
+    title: "React test",
     description: "Online sales website, where you can publish, purchase, and arrange shipping.",
-    technology: ["React", "Node.js", "JavaScript"],
-    link: "#",
+    technology: ["React", "Javascript"],
+    link: "https://proyecto-react-omega-three.vercel.app/",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Projects() {
           {projectContent.map((item) => (
             <div
               key={item.id}
-              className="rounded-lg overflow-hidden shadow-md flex flex-col md:flex-row transition-all duration-200 ease-in hover:border border-blue-500/60 cursor-pointer hover:bg-black/15 hover:-translate-y-2 edit-efects relative"
+              className="rounded-lg overflow-hidden shadow-md bg-black/10 flex flex-col md:flex-row transition-all duration-200 ease-in hover:border border-blue-500/60 cursor-pointer hover:bg-black/30 hover:-translate-y-2 edit-efects relative"
             >
               {item.link ? (
                 <a
