@@ -4,8 +4,7 @@ import "./globals.css";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const inter = Inter({
-  subsets: ['latin'], 
-  preload: true,     
+  subsets: ['latin'], // <- obligatorio
 });
 
 export const metadata: Metadata = {
