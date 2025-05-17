@@ -36,7 +36,7 @@ export default function Projects() {
   return (
     <div >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-90">
-        <h2 className="text-gray-300 text-4xl font-bold mb-18">Projects</h2>
+        <h2 className="text-gray-300 text-4xl font-bold mb-18 text-center">Projects</h2>
         <div className="space-y-14">
           {projectContent.map((item) => (
             <div

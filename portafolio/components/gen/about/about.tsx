@@ -30,7 +30,7 @@ export default function About({ onComplete }: { onComplete?: () => void }) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 text-center lg:text-left">
       {showTextA && (
         <TextGenerateEffect words={textA} onComplete={() => setShowTextB(true)} duration={0.2} staggerDelay={0.01} />
       )}

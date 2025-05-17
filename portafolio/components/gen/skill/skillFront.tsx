@@ -88,9 +88,9 @@ interface SkillItem {
 
 export default function SkillFront() {
   return (
-  <div>
-        <h2 className="text-gray-300 text-4xl font-bold">Front-end</h2>
-        <div className="grid grid-cols-3 gap-16 mt-18 ml-8">
+  <div className="mb-10">
+     <div className="flex justify-center"><h2 className="text-gray-300 text-4xl font-bold ">Front-end</h2></div>
+      <div className="grid grid-cols-2  sm:grid-cols-3 gap-14 mt-18 "> 
           {frontEnd.map((item) => (
             <div
               key={item.id}

@@ -17,8 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
-        <AuroraBackground>{children}</AuroraBackground>
+      <body className={`${inter.className} antialiased relative bg-black`}>
+        <div className="fixed inset-0 z-[-1]">
+          <AuroraBackground isFixedBackground />
+        </div>
+        <main className="relative z-0 h-full">
+          {children}
+        </main>
       </body>
     </html>
   );

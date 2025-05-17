@@ -73,7 +73,7 @@ export default function Opciones({ aboutRef, skillsRef, projectsRef }: Props) {
         {items.map(({ texto, href }) => (
           <li
             key={texto}
-            className={`nav-item ${activo === texto ? 'nav-item-active' : ''}`}
+            className={`mb-18 lg:mb-0 nav-item ${activo === texto ? 'nav-item-active' : ''}`}
             onClick={(e) => handleItemClick(texto, href)}
           >
             <a
